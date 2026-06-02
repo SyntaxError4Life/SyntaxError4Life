@@ -32,12 +32,10 @@
 <br>
 
 <!-- Projet 1 : open-taranis -->
-<table width="100%" bgcolor="#000000">
+<table width="100%">
   <tr>
     <td>
-      <a href="https://github.com/SyntaxError4Life/open-taranis">
-        <img src="open-taranis-ascii.png" height="100">
-      </a>
+      <a href="https://github.com/SyntaxError4Life/open-taranis"><img src="open-taranis-ascii.png" height="100"></a>
       <br>
       <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&repo=open-taranis&layout=compact&hide_title=true&hide_border=true&langs_count=4&theme=transparent" height="80">
     </td>
@@ -47,17 +45,16 @@
 <br>
 
 <!-- Projet 2 : nano -->
-<table width="100%" bgcolor="#000000">
+<table width="100%">
   <tr>
     <td>
-      <a href="https://github.com/SyntaxError4Life/nano">
-        <img src="nano-ascii.png" height="100">
-      </a>
+      <a href="https://github.com/SyntaxError4Life/nano"><img src="nano-ascii.png" height="100"></a>
       <br>
       <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&repo=nano&layout=compact&hide_title=true&hide_border=true&langs_count=4&theme=transparent" height="80">
     </td>
   </tr>
 </table>
+
 
 <br>
 
