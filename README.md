@@ -1,4 +1,5 @@
 ![](black_hole.gif)
+<!-- https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa -->
 
 <p align="center">
   <strong>SyntaxError4Life</strong><br>
@@ -11,23 +12,21 @@
   <a href="https://matrix.to/#/@lilian:rv0.fr"><img src="https://img.shields.io/badge/Matrix-000000?style=flat-square&logo=matrix&logoColor=white"></a>
 </p>
 
-<br>
-
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
       <img src="ascii-art.png" width="100%">
+      <br><br>
+      <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
     </td>
     <td width="50%" valign="top">
 
-<h3>📊 GitHub Stats</h3>
-
-![](https://github-readme-stats.shion.dev/api?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true)<br/><br/>
-
 ![](https://streak-stats.demolab.com/?user=SyntaxError4Life&theme=dark&hide_border=true&background=000000)<br/><br/>
 
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500)
+![](space.gif)
+<!-- [https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa](https://giphy.com/gifs/space-cosmos-cosmonaut-eHXed39iQn3TrMAZJO) -->
 
+</td>
   </tr>
 </table>
 
