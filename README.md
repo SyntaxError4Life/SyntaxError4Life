@@ -1,3 +1,5 @@
+![](black_hole.gif)
+
 <p align="center">
   <strong>SyntaxError4Life</strong><br>
   Développeur • Data Scientist • Étudiant
