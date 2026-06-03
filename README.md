@@ -26,7 +26,7 @@
 ![](space.gif)
 <!-- [https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa](https://giphy.com/gifs/space-cosmos-cosmonaut-eHXed39iQn3TrMAZJO) -->
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=70&lines=Data+is+the+new+oil" width="100%">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=70&lines=DATA+IS+THE+NEW+OIL" width="100%">
 
 </td>
   </tr>
