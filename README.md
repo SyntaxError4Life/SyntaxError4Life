@@ -17,16 +17,15 @@
     <td width="50%" valign="top">
       <img src="ascii-art.png" width="100%">
       <br><br>
-      <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=25&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=30&lines=DATA+IS+THE+NEW+OIL" width="100%">
     </td>
     <td width="50%" valign="top">
 
 ![](https://streak-stats.demolab.com/?user=SyntaxError4Life&theme=dark&hide_border=true&background=000000)<br/><br/>
 
-![](space.gif)
-<!-- [https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa](https://giphy.com/gifs/space-cosmos-cosmonaut-eHXed39iQn3TrMAZJO) -->
+![](frieren.gif)
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=70&lines=DATA+IS+THE+NEW+OIL" width="100%">
+<img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
 
 </td>
   </tr>
