@@ -1,5 +1,5 @@
 ![](black_hole.gif)
-<!-- https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa -->
+<!-- https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa --> 
 
 <p align="center">
   <strong>SyntaxError4Life</strong><br>
