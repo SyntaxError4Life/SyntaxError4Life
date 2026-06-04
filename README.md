@@ -17,7 +17,7 @@
     <td width="50%" valign="top">
       <img src="content/ascii-art.png" width="100%">
       <br><br>
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=25&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=40&lines=DATA+IS+THE+NEW+OIL" width="100%">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=50&lines=DATA+IS+THE+NEW+OIL" width="100%">
     </td>
     <td width="50%" valign="top">
 

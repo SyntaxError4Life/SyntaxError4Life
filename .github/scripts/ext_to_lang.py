@@ -89,7 +89,7 @@ ext_to_lang = {
 
 # Extensions à exclure du compte final
 EXCLUDED_LANGS = {
-    'JSON', 'YAML', 'TOML', 'XML', 'INI', 'CONFIG', 'CFG', 'CONF',
+    'JSON', 'YAML', 'YML', 'TOML', 'XML', 'INI', 'CONFIG', 'CFG', 'CONF',
     'TXT', 'TEXT',
     'SVG', 'GIF', 'PNG', 'JPG', 'JPEG', 'ICO', 'BMP', 'WEBP',
     'SAMPLE', 'IDX', 'PACK', 'REV',
