@@ -392,11 +392,10 @@ def generate_lines_svg(lang_stats, top_n=8):
     if total == 0:
         total = 1
     
-    # Dimensions
     width = 600
-    row_height = 25
-    top_padding = 10
-    bottom_padding = 20
+    row_height = 30
+    top_padding = 15
+    bottom_padding = 25
     height = top_padding + (len(sorted_langs) * row_height) + bottom_padding
     
     max_lines = max([v for _, v in sorted_langs]) if sorted_langs else 1
@@ -412,16 +411,16 @@ def generate_lines_svg(lang_stats, top_n=8):
         
         bars.append(f'''
         <g transform="translate(20, {y})">
-            <text x="0" y="15" fill="{color}" font-family="monospace" font-size="12">{lang}</text>
-            <rect x="120" y="2" width="{bar_width}" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="{125 + bar_width}" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">{lines:,} ({percentage:.1f}%)</text>
+            <text x="0" y="18" fill="{color}" font-family="monospace" font-size="14">{lang}</text>
+            <rect x="120" y="4" width="{bar_width}" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="{125 + bar_width}" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">{lines:,} ({percentage:.1f}%)</text>
         </g>
         ''')
         y += row_height
     
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="10">Total: {sum(filtered_stats.values()):,} lines</text>
+    <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="12">Total: {sum(filtered_stats.values()):,} lines</text>
     {''.join(bars)}
 </svg>'''
     
@@ -431,36 +430,34 @@ def generate_lines_svg(lang_stats, top_n=8):
 def generate_streak_svg(streak_data):
     """Generate SVG for GitHub streak stats."""
     width = 800
-    height = 150
+    height = 200
     
-    # Calcul des positions
     center_y = height // 2
-    col1_x = width * 0.17  # ~136px
-    col2_x = width * 0.50  # 400px
-    col3_x = width * 0.83  # ~664px
+    col1_x = width * 0.17
+    col2_x = width * 0.50
+    col3_x = width * 0.83
     
-    # Barres verticales de séparation
-    bar1_x = width * 0.33  # ~266px
-    bar2_x = width * 0.67  # ~534px
+    bar1_x = width * 0.33
+    bar2_x = width * 0.67
     
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
     
     <!-- Barres verticales de séparation -->
-    <line x1="{bar1_x}" y1="30" x2="{bar1_x}" y2="{height - 30}" stroke="#333333" stroke-width="2"/>
-    <line x1="{bar2_x}" y1="30" x2="{bar2_x}" y2="{height - 30}" stroke="#333333" stroke-width="2"/>
+    <line x1="{bar1_x}" y1="25" x2="{bar1_x}" y2="{height - 25}" stroke="#333333" stroke-width="2"/>
+    <line x1="{bar2_x}" y1="25" x2="{bar2_x}" y2="{height - 25}" stroke="#333333" stroke-width="2"/>
     
     <!-- Total (gauche) -->
-    <text x="{col1_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['total']:,}</text>
-    <text x="{col1_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Total last 12 months</text>
+    <text x="{col1_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['total']:,}</text>
+    <text x="{col1_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Total last 12 months</text>
     
     <!-- Current Streak (milieu) -->
-    <text x="{col2_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['current']}</text>
-    <text x="{col2_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Current Streak</text>
+    <text x="{col2_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['current']}</text>
+    <text x="{col2_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Current Streak</text>
     
     <!-- Longest Streak (droite) -->
-    <text x="{col3_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['longest']}</text>
-    <text x="{col3_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Longest Streak</text>
+    <text x="{col3_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['longest']}</text>
+    <text x="{col3_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Longest Streak</text>
 </svg>'''
     
     return svg

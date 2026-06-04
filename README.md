@@ -20,9 +20,8 @@
     </td>
     <td width="50%" valign="top">
 
-![](.github/stats/github-streak.svg?raw=true)<br/><br/>
+![](.github/stats/github-streak.svg?raw=true)
 ![](content/frieren.gif)
-
 ![](.github/stats/github-lines.svg?raw=true)
 
 </td>
