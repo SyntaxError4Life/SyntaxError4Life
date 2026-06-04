@@ -1,30 +1,30 @@
-<svg width="600" height="260" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="210" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
     <text x="20" y="25" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">Lines of Code by Language</text>
-    <text x="20" y="250" fill="#888888" font-family="monospace" font-size="10">Total: 1,533 lines</text>
+    <text x="20" y="200" fill="#888888" font-family="monospace" font-size="10">Total: 2,313 lines</text>
     
         <g transform="translate(20, 40)">
             <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">Python</text>
             <rect x="120" y="2" width="350.0" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="475.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">1,307 (85.3%)</text>
+            <text x="475.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2,041 (88.2%)</text>
         </g>
         
         <g transform="translate(20, 65)">
             <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">Markdown</text>
-            <rect x="120" y="2" width="59.98469778117827" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="184.98469778117828" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">224 (14.6%)</text>
+            <rect x="120" y="2" width="38.412542871141596" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="163.4125428711416" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">224 (9.7%)</text>
         </g>
         
         <g transform="translate(20, 90)">
-            <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">HTML</text>
-            <rect x="120" y="2" width="0.5355776587605202" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="125.53557765876052" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2 (0.1%)</text>
+            <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">YML </text>
+            <rect x="120" y="2" width="7.888290053895149" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="132.88829005389516" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">46 (2.0%)</text>
         </g>
         
         <g transform="translate(20, 115)">
-            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
-            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
+            <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">HTML</text>
+            <rect x="120" y="2" width="0.34296913277804997" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="125.34296913277805" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2 (0.1%)</text>
         </g>
         
         <g transform="translate(20, 140)">
@@ -34,18 +34,6 @@
         </g>
         
         <g transform="translate(20, 165)">
-            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
-            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
-        </g>
-        
-        <g transform="translate(20, 190)">
-            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
-            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
-        </g>
-        
-        <g transform="translate(20, 215)">
             <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
             <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
             <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>

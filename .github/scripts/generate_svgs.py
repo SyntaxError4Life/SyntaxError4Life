@@ -377,7 +377,7 @@ def get_huggingface_stats():
     }
 
 
-def generate_lines_svg(lang_stats, top_n=8):
+def generate_lines_svg(lang_stats, top_n=6):
     """Generate SVG for lines of code by language."""
     # Utilise EXCLUDED_LANGS importé depuis ext_to_lang
     filtered_stats = {k: v for k, v in lang_stats.items() if k not in EXCLUDED_LANGS}
