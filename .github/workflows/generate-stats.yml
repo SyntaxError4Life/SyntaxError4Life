@@ -47,4 +47,6 @@ jobs:
         with:
           commit_message: 'Update stats SVGs [automated]'
           file_pattern: '.github/stats/*.svg'
-          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
+          commit_author: 'SyntaxError4Life <lilian@zanomega.com>'
+          commit_user_name: 'SyntaxError4Life'
+          commit_user_email: 'lilian@zanomega.com'
