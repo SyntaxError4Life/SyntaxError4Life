@@ -42,11 +42,60 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python .github/scripts/generate_svgs.py
 
+name: Generate Stats SVGs
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+      timezone: 'Europe/Paris'
+    - cron: '0 12 * * *'
+      timezone: 'Europe/Paris'
+    - cron: '0 20 * * *'
+      timezone: 'Europe/Paris'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install cloc
+        run: sudo apt-get update && sudo apt-get install -y cloc
+
+      - name: Install Python dependencies
+        run: |
+          pip install PyGithub requests pyyaml
+
+      - name: Generate SVGs
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python .github/scripts/generate_svgs.py
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
+
       - name: Commit and push SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'Update stats SVGs [automated]'
+          commit_message: 'Update stats SVGs [${{ steps.date.outputs.date }}]'
           file_pattern: '.github/stats/*.svg'
           commit_author: 'SyntaxError4Life <lilian@zanomega.com>'
           commit_user_name: 'SyntaxError4Life'
           commit_user_email: 'lilian@zanomega.com'
+          skip_fetch: true
