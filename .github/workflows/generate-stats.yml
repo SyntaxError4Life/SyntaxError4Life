@@ -50,8 +50,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Update stats SVGs [${{ steps.date.outputs.date }}]'
+          file_pattern: '.github/stats/*.svg'
           commit_author: 'SyntaxError4Life <41898282+SyntaxError4Life@users.noreply.github.com>'
-          commit_user_email: '41898282+SyntaxError4Life@users.noreply.github.com'
           commit_user_name: 'SyntaxError4Life'
-          commit_user_email: 'lilian@zanomega.com'
+          commit_user_email: '41898282+SyntaxError4Life@users.noreply.github.com'
           skip_fetch: true
