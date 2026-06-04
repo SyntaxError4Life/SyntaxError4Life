@@ -1,4 +1,4 @@
-![](ontent/black_hole.gif)
+![](content/black_hole.gif)
 <!-- https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa --> 
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ![](https://streak-stats.demolab.com/?user=SyntaxError4Life&theme=dark&hide_border=true&background=000000)<br/><br/>
 
-![](ontent/frieren.gif)
+![](content/frieren.gif)
 
 <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
 
