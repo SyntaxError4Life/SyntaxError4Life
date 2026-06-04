@@ -1,4 +1,4 @@
-![](black_hole.gif)
+![](ontent/black_hole.gif)
 <!-- https://giphy.com/gifs/loop-space-circle-cqv1ehyeR4KigaiHRa --> 
 
 <p align="center">
@@ -15,7 +15,7 @@
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <img src="ascii-art.png" width="100%">
+      <img src="content/ascii-art.png" width="100%">
       <br><br>
       <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=25&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=40&lines=DATA+IS+THE+NEW+OIL" width="100%">
     </td>
@@ -23,7 +23,7 @@
 
 ![](https://streak-stats.demolab.com/?user=SyntaxError4Life&theme=dark&hide_border=true&background=000000)<br/><br/>
 
-![](frieren.gif)
+![](ontent/frieren.gif)
 
 <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
 
