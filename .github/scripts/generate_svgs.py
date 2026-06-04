@@ -328,7 +328,7 @@ def process_repo(repo_name, cache, temp_dir):
         # Aggregate by language
         lang_lines = defaultdict(int)
         for ext, count in lines_by_ext.items():
-            lang = ext_to_lang.get(ext, ext.lstrip('.').upper() if ext != "(no extension)" else "Other")
+            lang = ext_to_lang.get(ext, ext.lstrip('.').upper().strip() if ext != "(no extension)" else "Other")
             lang_lines[lang] += count
         
         data = {
@@ -379,17 +379,13 @@ def get_huggingface_stats():
 
 def generate_lines_svg(lang_stats, top_n=8):
     """Generate SVG for lines of code by language."""
-    # Utilise EXCLUDED_LANGS importé depuis ext_to_lang
     filtered_stats = {k: v for k, v in lang_stats.items() if k not in EXCLUDED_LANGS}
     
-    # Trier et prendre top N
     sorted_langs = sorted(filtered_stats.items(), key=lambda x: x[1], reverse=True)
     
-    # Compléter avec des placeholders si moins de 8
     while len(sorted_langs) < top_n:
         sorted_langs.append(("-", 0))
     
-    # Prendre seulement top_n
     sorted_langs = sorted_langs[:top_n]
     
     total = sum(filtered_stats.values())
@@ -399,15 +395,15 @@ def generate_lines_svg(lang_stats, top_n=8):
     # Dimensions
     width = 600
     row_height = 25
-    header_height = 40
-    height = header_height + (len(sorted_langs) * row_height) + 20
+    top_padding = 10
+    bottom_padding = 20
+    height = top_padding + (len(sorted_langs) * row_height) + bottom_padding
     
-    # Barres réduites
     max_lines = max([v for _, v in sorted_langs]) if sorted_langs else 1
     max_bar_width = 350
     
     bars = []
-    y = header_height
+    y = top_padding
     for lang, lines in sorted_langs:
         percentage = (lines / total * 100)
         bar_width = (lines / max_lines * max_bar_width) if max_lines > 0 else 0
@@ -425,7 +421,6 @@ def generate_lines_svg(lang_stats, top_n=8):
     
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="25" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">Lines of Code by Language</text>
     <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="10">Total: {sum(filtered_stats.values()):,} lines</text>
     {''.join(bars)}
 </svg>'''
@@ -435,30 +430,37 @@ def generate_lines_svg(lang_stats, top_n=8):
 
 def generate_streak_svg(streak_data):
     """Generate SVG for GitHub streak stats."""
-    width = 640  # Augmenté
-    height = 130  # Un peu plus haut pour la légende
+    width = 800
+    height = 150
+    
+    # Calcul des positions
+    center_y = height // 2
+    col1_x = width * 0.17  # ~136px
+    col2_x = width * 0.50  # 400px
+    col3_x = width * 0.83  # ~664px
+    
+    # Barres verticales de séparation
+    bar1_x = width * 0.33  # ~266px
+    bar2_x = width * 0.67  # ~534px
     
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="320" y="20" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">GitHub Contributions</text>
-    <text x="320" y="35" fill="#666666" font-family="monospace" font-size="10" text-anchor="middle">Last 12 months</text>
     
-    <g transform="translate(80, 60)">
-        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Total</text>
-        <text x="0" y="25" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">{streak_data['total']:,}</text>
-    </g>
+    <!-- Barres verticales de séparation -->
+    <line x1="{bar1_x}" y1="30" x2="{bar1_x}" y2="{height - 30}" stroke="#333333" stroke-width="2"/>
+    <line x1="{bar2_x}" y1="30" x2="{bar2_x}" y2="{height - 30}" stroke="#333333" stroke-width="2"/>
     
-    <g transform="translate(280, 60)">
-        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Current Streak</text>
-        <text x="0" y="25" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">{streak_data['current']}</text>
-        <text x="0" y="40" fill="#888888" font-family="monospace" font-size="9">days</text>
-    </g>
+    <!-- Total (gauche) -->
+    <text x="{col1_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['total']:,}</text>
+    <text x="{col1_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Total last 12 months</text>
     
-    <g transform="translate(480, 60)">
-        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Longest Streak</text>
-        <text x="0" y="25" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">{streak_data['longest']}</text>
-        <text x="0" y="40" fill="#888888" font-family="monospace" font-size="9">days</text>
-    </g>
+    <!-- Current Streak (milieu) -->
+    <text x="{col2_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['current']}</text>
+    <text x="{col2_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Current Streak</text>
+    
+    <!-- Longest Streak (droite) -->
+    <text x="{col3_x}" y="{center_y - 10}" fill="#ffffff" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle">{streak_data['longest']}</text>
+    <text x="{col3_x}" y="{center_y + 25}" fill="#888888" font-family="monospace" font-size="14" text-anchor="middle">Longest Streak</text>
 </svg>'''
     
     return svg

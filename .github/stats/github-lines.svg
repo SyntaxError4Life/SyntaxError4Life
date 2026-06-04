@@ -1,39 +1,50 @@
-<svg width="600" height="210" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="230" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="25" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">Lines of Code by Language</text>
-    <text x="20" y="200" fill="#888888" font-family="monospace" font-size="10">Total: 2,313 lines</text>
+    <text x="20" y="220" fill="#888888" font-family="monospace" font-size="10">Total: 2,265 lines</text>
     
-        <g transform="translate(20, 40)">
+        <g transform="translate(20, 10)">
             <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">Python</text>
             <rect x="120" y="2" width="350.0" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="475.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2,041 (88.2%)</text>
+            <text x="475.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2,041 (90.1%)</text>
         </g>
         
-        <g transform="translate(20, 65)">
+        <g transform="translate(20, 35)">
             <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">Markdown</text>
             <rect x="120" y="2" width="38.412542871141596" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="163.4125428711416" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">224 (9.7%)</text>
+            <text x="163.4125428711416" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">224 (9.9%)</text>
         </g>
         
-        <g transform="translate(20, 90)">
-            <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">YML </text>
-            <rect x="120" y="2" width="7.888290053895149" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="132.88829005389516" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">46 (2.0%)</text>
-        </g>
-        
-        <g transform="translate(20, 115)">
-            <text x="0" y="15" fill="#ffffff" font-family="monospace" font-size="12">HTML</text>
-            <rect x="120" y="2" width="0.34296913277804997" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="125.34296913277805" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">2 (0.1%)</text>
-        </g>
-        
-        <g transform="translate(20, 140)">
+        <g transform="translate(20, 60)">
             <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
             <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
             <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
         </g>
         
-        <g transform="translate(20, 165)">
+        <g transform="translate(20, 85)">
+            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
+            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 110)">
+            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
+            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 135)">
+            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
+            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 160)">
+            <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
+            <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 185)">
             <text x="0" y="15" fill="#444444" font-family="monospace" font-size="12">-</text>
             <rect x="120" y="2" width="0.0" height="18" fill="#ffffff" opacity="0.8"/>
             <text x="125.0" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">0 (0.0%)</text>

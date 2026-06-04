@@ -66,7 +66,7 @@ ext_to_lang = {
     '.mdx': 'Markdown',
     '.rst': 'reStructuredText',
     '.yaml': 'YAML',
-    '.yml': 'YAML',
+    '.yml': 'YML',
     '.json': 'JSON',
     '.toml': 'TOML',
     '.xml': 'XML',
@@ -94,6 +94,8 @@ EXCLUDED_LANGS = {
     'SVG', 'GIF', 'PNG', 'JPG', 'JPEG', 'ICO', 'BMP', 'WEBP',
     'SAMPLE', 'IDX', 'PACK', 'REV',
     'PYC', 'PYO',
+
+    'HTML', 'CSS',
     '(NO EXTENSION)',
     'Other',
     '1', '2', '3', '4', '5', '6', '7', '8', '9',  # Man pages
