@@ -1,7 +1,11 @@
-aname: Generate Stats SVGs
+name: Generate Stats SVGs
 
 on:
   schedule:
+    - cron: '0 4 * * *'
+      timezone: 'Europe/Paris'
+    - cron: '0 12 * * *'
+      timezone: 'Europe/Paris'
     - cron: '0 20 * * *'
       timezone: 'Europe/Paris'
   workflow_dispatch:
