@@ -1,0 +1,20 @@
+<svg width="640" height="120" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#000000"/>
+    <text x="20" y="25" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">SyntaxError4Life/open-taranis</text>
+    
+    <g transform="translate(20, 50)">
+        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Your Lines</text>
+        <text x="0" y="20" fill="#ffffff" font-family="monospace" font-size="18" font-weight="bold">1,502</text>
+    </g>
+    
+    <g transform="translate(180, 50)">
+        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Top Language</text>
+        <text x="0" y="20" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">Python</text>
+        <text x="0" y="35" fill="#888888" font-family="monospace" font-size="9">1,307 lines</text>
+    </g>
+    
+    <g transform="translate(400, 50)">
+        <text x="0" y="0" fill="#888888" font-family="monospace" font-size="10">Languages</text>
+        <text x="0" y="20" fill="#ffffff" font-family="monospace" font-size="18" font-weight="bold">4</text>
+    </g>
+</svg>
