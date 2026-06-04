@@ -21,11 +21,11 @@
     </td>
     <td width="50%" valign="top">
 
-![](https://streak-stats.demolab.com/?user=SyntaxError4Life&theme=dark&hide_border=true&background=000000)<br/><br/>
+![](.github/stats/github-streak.svg?raw=true)<br/><br/>
 
 ![](content/frieren.gif)
 
-<img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SyntaxError4Life&theme=dark&hide_border=true&bg_color=000000&include_all_commits=true&count_private=true&layout=compact&card_width=500" width="100%">
+![](.github/stats/github-lines.svg?raw=true)
 
 </td>
   </tr>

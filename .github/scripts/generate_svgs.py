@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 import yaml
 
+from ext_to_lang import ext_to_lang, EXCLUDED_LANGS
 
 # Configuration
 CONFIG_PATH = Path(".github/config/tracked-repos.yml")
@@ -322,51 +323,7 @@ def process_repo(repo_name, cache, temp_dir):
         lines_by_ext = get_file_extensions_breakdown(repo_path, USERNAME)
         
         # Map extensions to languages (simplified)
-        ext_to_lang = {
-            '.py': 'Python',
-            '.js': 'JavaScript',
-            '.ts': 'TypeScript',
-            '.jsx': 'JavaScript',
-            '.tsx': 'TypeScript',
-            '.rs': 'Rust',
-            '.go': 'Go',
-            '.c': 'C',
-            '.cpp': 'C++',
-            '.h': 'C',
-            '.hpp': 'C++',
-            '.java': 'Java',
-            '.rb': 'Ruby',
-            '.php': 'PHP',
-            '.swift': 'Swift',
-            '.kt': 'Kotlin',
-            '.scala': 'Scala',
-            '.r': 'R',
-            '.m': 'Objective-C',
-            '.cs': 'C#',
-            '.fs': 'F#',
-            '.sh': 'Shell',
-            '.bash': 'Shell',
-            '.zsh': 'Shell',
-            '.ps1': 'PowerShell',
-            '.pl': 'Perl',
-            '.lua': 'Lua',
-            '.sql': 'SQL',
-            '.html': 'HTML',
-            '.css': 'CSS',
-            '.scss': 'SCSS',
-            '.sass': 'Sass',
-            '.less': 'Less',
-            '.json': 'JSON',
-            '.xml': 'XML',
-            '.yaml': 'YAML',
-            '.yml': 'YAML',
-            '.toml': 'TOML',
-            '.md': 'Markdown',
-            '.rst': 'reStructuredText',
-            '.dockerfile': 'Dockerfile',
-            '.makefile': 'Makefile',
-            '.cmake': 'CMake',
-        }
+        #ext_to_lang = None
         
         # Aggregate by language
         lang_lines = defaultdict(int)
@@ -422,10 +379,8 @@ def get_huggingface_stats():
 
 def generate_lines_svg(lang_stats, top_n=8):
     """Generate SVG for lines of code by language."""
-    # Filtrer les formats de config
-    excluded = {'JSON', 'YAML', 'TOML', 'XML', 'reStructuredText', 
-                'Dockerfile', 'Makefile', 'CMake', '(no extension)'}
-    filtered_stats = {k: v for k, v in lang_stats.items() if k not in excluded}
+    # Utilise EXCLUDED_LANGS importé depuis ext_to_lang
+    filtered_stats = {k: v for k, v in lang_stats.items() if k not in EXCLUDED_LANGS}
     
     # Trier et prendre top N
     sorted_langs = sorted(filtered_stats.items(), key=lambda x: x[1], reverse=True)
@@ -441,29 +396,29 @@ def generate_lines_svg(lang_stats, top_n=8):
     if total == 0:
         total = 1
     
-    # Dimensions - poire coupée en deux !
-    width = 500  # Fixe à 500px standard
+    # Dimensions
+    width = 600
     row_height = 25
     header_height = 40
     height = header_height + (len(sorted_langs) * row_height) + 20
     
-    # Barre réduite par 3 (280px max au lieu de 850)
+    # Barres réduites
     max_lines = max([v for _, v in sorted_langs]) if sorted_langs else 1
+    max_bar_width = 350
     
     bars = []
     y = header_height
     for lang, lines in sorted_langs:
         percentage = (lines / total * 100)
-        bar_width = (lines / max_lines * 280) if max_lines > 0 else 0  # Réduit par 3
+        bar_width = (lines / max_lines * max_bar_width) if max_lines > 0 else 0
         
-        # Couleur grise pour placeholders
         color = "#444444" if lang == "-" else "#ffffff"
         
         bars.append(f'''
         <g transform="translate(20, {y})">
             <text x="0" y="15" fill="{color}" font-family="monospace" font-size="12">{lang}</text>
-            <rect x="100" y="2" width="{bar_width}" height="18" fill="#ffffff" opacity="0.8"/>
-            <text x="{105 + bar_width}" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">{lines:,} ({percentage:.1f}%)</text>
+            <rect x="120" y="2" width="{bar_width}" height="18" fill="#ffffff" opacity="0.8"/>
+            <text x="{125 + bar_width}" y="15" fill="#aaaaaa" font-family="monospace" font-size="11">{lines:,} ({percentage:.1f}%)</text>
         </g>
         ''')
         y += row_height
