@@ -44,6 +44,8 @@ jobs:
 
       - name: Get current date
         id: date
+        env:
+          TZ: Europe/Paris
         run: echo "date=$(date +'%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
 
       - name: Commit and push SVGs
