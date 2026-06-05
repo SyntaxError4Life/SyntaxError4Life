@@ -16,7 +16,7 @@
   <tr>
     <td width="50%" valign="top">
       <img src="content/ascii-art.png" width="100%">
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=1000&color=FFFFFF&background=000000&center=true&vCenter=true&width=500&height=50&lines=DATA+IS+THE+NEW+OIL" width="100%">
+      <img src="content/DATA_IS_THE_NEW_OIL.svg" width="100%">
     </td>
     <td width="50%" valign="top">
 
