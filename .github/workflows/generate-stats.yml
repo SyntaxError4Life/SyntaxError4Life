@@ -2,9 +2,8 @@ name: Generate Stats SVGs
 
 on:
   schedule:
-    - cron: '0 2 * * *'    # 2h UTC = 4h Paris (été)
-    - cron: '0 10 * * *'   # 10h UTC = 12h Paris (été)
-    - cron: '0 18 * * *'   # 18h UTC = 20h Paris (été)
+    - cron: '0 2 * * *'    # ~6h
+    - cron: '0 14 * * *'   # ~18h
   workflow_dispatch:
 
 permissions:
