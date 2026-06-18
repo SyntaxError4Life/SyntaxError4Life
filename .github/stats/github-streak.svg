@@ -6,14 +6,14 @@
     <line x1="536.0" y1="25" x2="536.0" y2="175" stroke="#333333" stroke-width="2"/>
     
     <!-- Total (gauche) -->
-    <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">152</text>
+    <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">153</text>
     <text x="136.0" y="130" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Total last 12 months</text>
     
     <!-- Current Streak (milieu) -->
-    <text x="400.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">17</text>
+    <text x="400.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">18</text>
     <text x="400.0" y="130" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Current Streak</text>
     
     <!-- Longest Streak (droite) -->
-    <text x="664.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">17</text>
+    <text x="664.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">18</text>
     <text x="664.0" y="130" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Longest Streak</text>
 </svg>
