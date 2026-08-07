@@ -26,7 +26,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install cloc
-        run: sudo apt-get update && sudo apt-get install -y cloc
+        uses: gerlero/apt-install@v1
+        with:
+          packages: cloc
 
       - name: Restore cached virtualenv
         id: cache-venv
