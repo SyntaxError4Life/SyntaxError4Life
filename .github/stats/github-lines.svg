@@ -1,17 +1,17 @@
 <svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 2,264 lines</text>
+    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 2,277 lines</text>
     
         <g transform="translate(20, 15)">
             <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Python</text>
             <rect x="120" y="4" width="350.0" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="475.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">2,042 (90.2%)</text>
+            <text x="475.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">2,042 (89.7%)</text>
         </g>
         
         <g transform="translate(20, 45)">
             <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Markdown</text>
-            <rect x="120" y="4" width="38.05093046033301" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="163.050930460333" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">222 (9.8%)</text>
+            <rect x="120" y="4" width="40.279138099902056" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="165.27913809990207" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">235 (10.3%)</text>
         </g>
         
         <g transform="translate(20, 75)">
