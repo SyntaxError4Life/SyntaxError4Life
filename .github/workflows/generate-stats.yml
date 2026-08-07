@@ -2,7 +2,7 @@ name: Generate Stats SVGs
 
 on:
   schedule:
-    - cron: '0 14 * * *'   # ~15-18h
+    - cron: '0 14 * * *'   # ~18h
   workflow_dispatch:
 
 permissions:
@@ -20,23 +20,40 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Python
+        id: python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip' 
-          cache-dependency-path: requirements.txt
 
       - name: Install cloc
         run: sudo apt-get update && sudo apt-get install -y cloc
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Restore cached virtualenv
+        id: cache-venv
+        uses: actions/cache/restore@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Create virtualenv and install dependencies
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --upgrade pip
+          .venv/bin/pip install -r requirements.txt
+
+      - name: Save virtualenv to cache
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
 
       - name: Generate SVGs
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python .github/scripts/generate_svgs.py
+        run: .venv/bin/python .github/scripts/generate_svgs.py
 
       - name: Get current date
         id: date
