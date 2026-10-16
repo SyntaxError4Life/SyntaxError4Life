@@ -1,3 +1,7 @@
 tracked_repos:
   - owner: "SyntaxError4Life"
     name: "open-taranis"
+  - owner: "SyntaxError4Life"
+    name: "Digit_recognition.py"
+  - owner: "Coda-Avignon"
+    name: "promo2026-b1-trombinoscope"
