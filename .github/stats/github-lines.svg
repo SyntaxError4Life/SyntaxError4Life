@@ -1,6 +1,6 @@
 <svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 4,753 lines</text>
+    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 4,752 lines</text>
     
         <g transform="translate(20, 15)">
             <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Python</text>
@@ -16,8 +16,8 @@
         
         <g transform="translate(20, 75)">
             <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Markdown</text>
-            <rect x="120" y="4" width="43.21447578499202" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="168.21447578499203" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">464 (9.8%)</text>
+            <rect x="120" y="4" width="43.121341138903674" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="168.1213411389037" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">463 (9.7%)</text>
         </g>
         
         <g transform="translate(20, 105)">
