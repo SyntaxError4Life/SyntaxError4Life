@@ -1,0 +1,53 @@
+<svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#000000"/>
+    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 4,830 lines</text>
+    
+        <g transform="translate(20, 15)">
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Python</text>
+            <rect x="120" y="4" width="350.0" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="475.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">3,708 (76.8%)</text>
+        </g>
+        
+        <g transform="translate(20, 45)">
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">JavaScript</text>
+            <rect x="120" y="4" width="48.04476806903991" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="173.04476806903992" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">509 (10.5%)</text>
+        </g>
+        
+        <g transform="translate(20, 75)">
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Markdown</text>
+            <rect x="120" y="4" width="45.02427184466019" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="170.02427184466018" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">477 (9.9%)</text>
+        </g>
+        
+        <g transform="translate(20, 105)">
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">C</text>
+            <rect x="120" y="4" width="10.760517799352751" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="135.76051779935275" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">114 (2.4%)</text>
+        </g>
+        
+        <g transform="translate(20, 135)">
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">SQL</text>
+            <rect x="120" y="4" width="2.0765911542610573" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="127.07659115426105" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">22 (0.5%)</text>
+        </g>
+        
+        <g transform="translate(20, 165)">
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
+            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 195)">
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
+            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+        </g>
+        
+        <g transform="translate(20, 225)">
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
+            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+        </g>
+        
+</svg>
