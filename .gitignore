@@ -1,2 +1,2 @@
-.github/stats/*
+.github/stats/*.svg
 .github/.stats_cache.json
