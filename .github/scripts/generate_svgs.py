@@ -7,7 +7,6 @@ Optimized for speed with parallel processing and caching.
 import os
 import json
 import subprocess
-import hashlib
 from pathlib import Path
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -213,55 +212,6 @@ def clone_repo(repo_name, temp_dir):
             check=True
         )
     return repo_path
-
-
-def count_lines_with_blame(repo_path, username):
-    """
-    Count lines written by specific user using parallel git blame.
-    Optimized with xargs -P for maximum speed.
-    """
-    # Get list of files
-    result = subprocess.run(
-        ["git", "-C", str(repo_path), "ls-files", "-z"],
-        capture_output=True, text=True
-    )
-    files = result.stdout.split('\0')[:-1]  # Remove last empty string
-    
-    if not files:
-        return {}
-    
-    # Use xargs with parallel processing for git blame
-    # This is much faster than sequential Python
-    cmd = (
-        f'cd {repo_path} && '
-        f'git ls-files -z | '
-        f'xargs -0rn1 -P "$(nproc)" -I{{}} '
-        f'sh -c \'git blame -w -M -C -C --line-porcelain -- "{{}}" 2>/dev/null | grep "^author "\''
-    )
-    
-    result = subprocess.run(
-        cmd,
-        shell=True,
-        capture_output=True,
-        text=True,
-        executable='/bin/bash'
-    )
-    
-    # Parse output and count lines per author
-    author_lines = defaultdict(int)
-    for line in result.stdout.split('\n'):
-        if line.startswith('author '):
-            author = line[7:].strip()
-            author_lines[author] += 1
-    
-    # Filter for target username (case insensitive)
-    target_lines = {}
-    for author, count in author_lines.items():
-        if author.lower() == username.lower():
-            target_lines[author] = count
-    
-    return target_lines
-
 
 def get_file_extensions_breakdown(repo_path, username):
     """Get lines per file extension for a specific user."""

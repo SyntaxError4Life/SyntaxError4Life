@@ -2,7 +2,8 @@ name: Generate Stats SVGs
 
 on:
   schedule:
-    - cron: '0 14 * * *'   # ~15-18h
+    - cron: '0 2 * * *'   # run de nuit
+    - cron: '0 14 * * *'  # run de jour (~15-18h)
   workflow_dispatch:
 
 permissions:
@@ -48,7 +49,4 @@ jobs:
         with:
           commit_message: 'Update stats SVGs [${{ steps.date.outputs.date }}]'
           file_pattern: '.github/stats/*.svg'
-          commit_user_name: 'SyntaxError4Life'
-          commit_author: 'SyntaxError4Life <184218508+SyntaxError4Life@users.noreply.github.com>'
-          commit_user_email: '184218508+SyntaxError4Life@users.noreply.github.com'
           skip_fetch: true
