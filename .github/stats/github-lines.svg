@@ -1,53 +1,86 @@
 <svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12">Total: 4,830 lines</text>
+    <text x="20" y="270" fill="#888888" font-family="monospace" font-size="12" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.98s" fill="freeze"/>Total: 4,830 lines</text>
     
         <g transform="translate(20, 15)">
-            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Python</text>
-            <rect x="120" y="4" width="350.0" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="475.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">3,708 (76.8%)</text>
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.2s" fill="freeze"/>Python</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="350.0" dur="0.4s" begin="0.25s" fill="freeze"/>
+            </rect>
+            <text x="475.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0.44s" fill="freeze"/>3,708 (76.8%)</text>
         </g>
         
         <g transform="translate(20, 45)">
-            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">JavaScript</text>
-            <rect x="120" y="4" width="48.04476806903991" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="173.04476806903992" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">509 (10.5%)</text>
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.36s" fill="freeze"/>JavaScript</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="48.04476806903991" dur="0.4s" begin="0.41s" fill="freeze"/>
+            </rect>
+            <text x="173.04476806903992" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0.6s" fill="freeze"/>509 (10.5%)</text>
         </g>
         
         <g transform="translate(20, 75)">
-            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">Markdown</text>
-            <rect x="120" y="4" width="45.02427184466019" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="170.02427184466018" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">477 (9.9%)</text>
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.52s" fill="freeze"/>Markdown</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="45.02427184466019" dur="0.4s" begin="0.57s" fill="freeze"/>
+            </rect>
+            <text x="170.02427184466018" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0.76s" fill="freeze"/>477 (9.9%)</text>
         </g>
         
         <g transform="translate(20, 105)">
-            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">C</text>
-            <rect x="120" y="4" width="10.760517799352751" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="135.76051779935275" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">114 (2.4%)</text>
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.68s" fill="freeze"/>C</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="10.760517799352751" dur="0.4s" begin="0.73s" fill="freeze"/>
+            </rect>
+            <text x="135.76051779935275" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0.92s" fill="freeze"/>114 (2.4%)</text>
         </g>
         
         <g transform="translate(20, 135)">
-            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14">SQL</text>
-            <rect x="120" y="4" width="2.0765911542610573" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="127.07659115426105" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">22 (0.5%)</text>
+            <text x="0" y="18" fill="#ffffff" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.84s" fill="freeze"/>SQL</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="2.0765911542610573" dur="0.4s" begin="0.89s" fill="freeze"/>
+            </rect>
+            <text x="127.07659115426105" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="1.08s" fill="freeze"/>22 (0.5%)</text>
         </g>
         
         <g transform="translate(20, 165)">
-            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
-            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.0s" fill="freeze"/>-</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="0.0" dur="0.4s" begin="1.05s" fill="freeze"/>
+            </rect>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="1.24s" fill="freeze"/>0 (0.0%)</text>
         </g>
         
         <g transform="translate(20, 195)">
-            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
-            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.16s" fill="freeze"/>-</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="0.0" dur="0.4s" begin="1.21s" fill="freeze"/>
+            </rect>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="1.4s" fill="freeze"/>0 (0.0%)</text>
         </g>
         
         <g transform="translate(20, 225)">
-            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14">-</text>
-            <rect x="120" y="4" width="0.0" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">0 (0.0%)</text>
+            <text x="0" y="18" fill="#444444" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.32s" fill="freeze"/>-</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="0.0" dur="0.4s" begin="1.37s" fill="freeze"/>
+            </rect>
+            <text x="125.0" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="1.56s" fill="freeze"/>0 (0.0%)</text>
         </g>
         
 </svg>

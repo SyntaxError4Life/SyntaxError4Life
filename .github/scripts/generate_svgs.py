@@ -22,7 +22,6 @@ STATS_DIR = Path(".github/stats")
 CACHE_FILE = Path(".github/.stats_cache.json")
 USERNAME = "SyntaxError4Life"
 HF_USERNAME = "Logikisto"
-EMAIL = "lilian@zanomega.com"
 
 # API endpoints
 GITHUB_GRAPHQL = "https://api.github.com/graphql"
@@ -353,24 +352,36 @@ def generate_lines_svg(lang_stats, top_n=8):
     
     bars = []
     y = top_padding
-    for lang, lines in sorted_langs:
+    # Animation one-shot (se joue une seule fois au chargement) : label, puis
+    # barre étirée, puis pourcentage. Démarrage immédiat (premier ~0.2s),
+    # staggered de 0.16s par ligne, fill="freeze" pour rester sur l'état final.
+    for i, (lang, lines) in enumerate(sorted_langs):
         percentage = (lines / total * 100)
         bar_width = (lines / max_lines * max_bar_width) if max_lines > 0 else 0
         
         color = "#444444" if lang == "-" else "#ffffff"
+        b = round(0.2 + i * 0.16, 3)          # début de ligne
+        bd = round(b + 0.05, 3)               # début de l'étirement de la barre
+        bl = round(b + 0.24, 3)               # début du %
         
         bars.append(f'''
         <g transform="translate(20, {y})">
-            <text x="0" y="18" fill="{color}" font-family="monospace" font-size="14">{lang}</text>
-            <rect x="120" y="4" width="{bar_width}" height="22" fill="#ffffff" opacity="0.8"/>
-            <text x="{125 + bar_width}" y="18" fill="#aaaaaa" font-family="monospace" font-size="13">{lines:,} ({percentage:.1f}%)</text>
+            <text x="0" y="18" fill="{color}" font-family="monospace" font-size="14" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="{b}s" fill="freeze"/>{lang}</text>
+            <rect x="120" y="4" height="22" fill="#ffffff" opacity="0.8">
+                <animate attributeName="width" from="0" to="{bar_width}" dur="0.4s" begin="{bd}s" fill="freeze"/>
+            </rect>
+            <text x="{125 + bar_width}" y="18" fill="#aaaaaa" font-family="monospace" font-size="13" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="{bl}s" fill="freeze"/>{lines:,} ({percentage:.1f}%)</text>
         </g>
         ''')
         y += row_height
     
+    total_begin = round(0.2 + len(sorted_langs) * 0.16 + 0.5, 3)
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
-    <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="12">Total: {sum(filtered_stats.values()):,} lines</text>
+    <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="12" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="{total_begin}s" fill="freeze"/>Total: {sum(filtered_stats.values()):,} lines</text>
     {''.join(bars)}
 </svg>'''
     
@@ -378,7 +389,12 @@ def generate_lines_svg(lang_stats, top_n=8):
 
 
 def generate_streak_svg(streak_data):
-    """Generate SVG for GitHub streak stats."""
+    """Generate SVG for GitHub streak stats, with an animated one-shot counter.
+
+    Les 3 valeurs (total / current / longest) comptent de 0 à leur valeur finale
+    simultanément, en ~1.6s, avec fondu-croisé continu (pas de clignotement) puis
+    se figent (fill="freeze"). Nombre de frames proportionnel à la valeur.
+    """
     width = 800
     height = 200
     
@@ -390,6 +406,47 @@ def generate_streak_svg(streak_data):
     bar1_x = width * 0.33
     bar2_x = width * 0.67
     
+    DUR_TOTAL = 1.6
+    T0 = 0.15
+    FADE = 0.03
+    
+    def n_frames(final):
+        # > 200 -> lisse (22), ~100 -> 18, sinon 12
+        if final >= 200:
+            return 22
+        if final >= 100:
+            return 18
+        return 12
+    
+    def counter_frames(x, final):
+        """Génère les <text> superposés du compteur animé pour une valeur."""
+        n = n_frames(final)
+        stagger = (DUR_TOTAL - T0) / (n - 1)
+        vals = [round(final * i / n) for i in range(n)] + [final]
+        chunks = []
+        for i, v in enumerate(vals):
+            t = T0 + i * stagger
+            is_last = (i == len(vals) - 1)
+            if is_last:
+                chunks.append(
+                    f'      <text x="{x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" '
+                    f'font-size="36" font-weight="bold" text-anchor="middle" opacity="0">\n'
+                    f'        <animate attributeName="opacity" from="0" to="1" dur="{FADE}s" '
+                    f'begin="{round(t, 4)}s" fill="freeze"/>\n'
+                    f'        {v:,}</text>')
+            else:
+                chunks.append(
+                    f'      <text x="{x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" '
+                    f'font-size="36" font-weight="bold" text-anchor="middle" opacity="0">\n'
+                    f'        <animate attributeName="opacity" from="0" to="1" dur="{FADE}s" '
+                    f'begin="{round(t, 4)}s" fill="freeze"/>\n'
+                    f'        <animate attributeName="opacity" from="1" to="0" dur="{FADE}s" '
+                    f'begin="{round(t + stagger - FADE, 4)}s" fill="freeze"/>\n'
+                    f'        {v:,}</text>')
+        return "\n".join(chunks)
+    
+    end_all = round(DUR_TOTAL + 0.05, 3)
+    
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
     
@@ -398,16 +455,19 @@ def generate_streak_svg(streak_data):
     <line x1="{bar2_x}" y1="25" x2="{bar2_x}" y2="{height - 25}" stroke="#333333" stroke-width="2"/>
     
     <!-- Total (gauche) -->
-    <text x="{col1_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['total']:,}</text>
-    <text x="{col1_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Total last 12 months</text>
+{counter_frames(col1_x, streak_data['total'])}
+    <text x="{col1_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle"
+      opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="{end_all}s" fill="freeze"/>Total last 12 months</text>
     
     <!-- Current Streak (milieu) -->
-    <text x="{col2_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['current']}</text>
-    <text x="{col2_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Current Streak</text>
+{counter_frames(col2_x, streak_data['current'])}
+    <text x="{col2_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle"
+      opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="{round(end_all + 0.05, 3)}s" fill="freeze"/>Current Streak</text>
     
     <!-- Longest Streak (droite) -->
-    <text x="{col3_x}" y="{center_y - 8}" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle">{streak_data['longest']}</text>
-    <text x="{col3_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle">Longest Streak</text>
+{counter_frames(col3_x, streak_data['longest'])}
+    <text x="{col3_x}" y="{center_y + 30}" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle"
+      opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="{round(end_all + 0.1, 3)}s" fill="freeze"/>Longest Streak</text>
 </svg>'''
     
     return svg
