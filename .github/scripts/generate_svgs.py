@@ -360,7 +360,7 @@ def generate_lines_svg(lang_stats, top_n=8):
         bar_width = (lines / max_lines * max_bar_width) if max_lines > 0 else 0
         
         color = "#444444" if lang == "-" else "#ffffff"
-        b = round(0.2 + i * 0.16, 3)          # début de ligne
+        b = round(1.2 + i * 0.16, 3)          # début de ligne (+1s de délai)
         bd = round(b + 0.05, 3)               # début de l'étirement de la barre
         bl = round(b + 0.24, 3)               # début du %
         
@@ -377,7 +377,7 @@ def generate_lines_svg(lang_stats, top_n=8):
         ''')
         y += row_height
     
-    total_begin = round(0.2 + len(sorted_langs) * 0.16 + 0.5, 3)
+    total_begin = round(1.2 + len(sorted_langs) * 0.16 + 0.5, 3)  # +1s délai
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
     <text x="20" y="{height - 10}" fill="#888888" font-family="monospace" font-size="12" opacity="0">
@@ -409,6 +409,7 @@ def generate_streak_svg(streak_data):
     DUR_TOTAL = 1.6
     T0 = 0.15
     FADE = 0.03
+    DELAY = 1.0  # 1s avant le début du compteur
     
     def n_frames(final):
         # > 200 -> lisse (22), ~100 -> 18, sinon 12
@@ -425,7 +426,7 @@ def generate_streak_svg(streak_data):
         vals = [round(final * i / n) for i in range(n)] + [final]
         chunks = []
         for i, v in enumerate(vals):
-            t = T0 + i * stagger
+            t = DELAY + T0 + i * stagger   # DELAY = 1s avant le début
             is_last = (i == len(vals) - 1)
             if is_last:
                 chunks.append(
@@ -445,7 +446,7 @@ def generate_streak_svg(streak_data):
                     f'        {v:,}</text>')
         return "\n".join(chunks)
     
-    end_all = round(DUR_TOTAL + 0.05, 3)
+    end_all = round(DELAY + DUR_TOTAL + 0.05, 3)
     
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#000000"/>
