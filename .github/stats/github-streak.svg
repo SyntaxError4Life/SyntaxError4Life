@@ -37,7 +37,7 @@
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="1.6333s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="1.6724s" fill="freeze"/>
-        116</text>
+        117</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="1.7024s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="1.7414s" fill="freeze"/>
@@ -49,11 +49,11 @@
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="1.8405s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="1.8795s" fill="freeze"/>
-        166</text>
+        167</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="1.9095s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="1.9486s" fill="freeze"/>
-        183</text>
+        184</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="1.9786s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.0176s" fill="freeze"/>
@@ -61,11 +61,11 @@
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.0476s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.0867s" fill="freeze"/>
-        216</text>
+        217</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.1167s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.1557s" fill="freeze"/>
-        233</text>
+        234</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.1857s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.2248s" fill="freeze"/>
@@ -73,30 +73,30 @@
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.2548s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.2938s" fill="freeze"/>
-        266</text>
+        267</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.3238s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.3629s" fill="freeze"/>
-        283</text>
+        284</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.3929s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.4319s" fill="freeze"/>
-        299</text>
+        300</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.4619s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.501s" fill="freeze"/>
-        316</text>
+        317</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.531s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.57s" fill="freeze"/>
-        333</text>
+        334</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.6s" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" dur="0.03s" begin="2.639s" fill="freeze"/>
-        349</text>
+        350</text>
       <text x="136.0" y="92" fill="#ffffff" font-family="monospace" font-size="36" font-weight="bold" text-anchor="middle" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.03s" begin="2.669s" fill="freeze"/>
-        366</text>
+        367</text>
     <text x="136.0" y="130" fill="#888888" font-family="monospace" font-size="16" text-anchor="middle"
       opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.65s" fill="freeze"/>Total last 12 months</text>
     
